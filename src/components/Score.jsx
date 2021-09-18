@@ -1,16 +1,24 @@
 import React, { Fragment } from 'react';
 
-const Score = ({ score, lastScore }) => {
+const Score = ({ lastScore, highest, currentScore }) => {
 
     return (
         <Fragment>
             <div className="scoreContainer">
-                <div className="new-score">New Score 
-                   <div>{score}</div>
+
+                <div className="score">Current Score
+                    <div>{currentScore}</div>
                 </div>
-                <div className="last-score">Last Score
+
+                <div className="score">Last Score
                     <div>{lastScore}</div>
                 </div>
+
+                <div className="score">Highest Score
+                    <div>{highest}</div>
+                </div>
+
+
             </div>
         </Fragment>
     );

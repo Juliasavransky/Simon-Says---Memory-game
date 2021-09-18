@@ -8,7 +8,7 @@ import PanelBottomLeft from './components/PanelBottomLeft';
 import PanelTopLeft from './components/PanelTopLeft';
 import PanelTpoRight from './components/PanelTpoRight';
 import timeout from './utils/timeout';
-import {useLocalStorageState} from './utils/localStorageHook';
+import { useLocalStorageState } from './utils/localStorageHook';
 import gameOver from './sounds/gameOver.wav';
 import gameStart from './sounds/game-start.wav';
 import gameSounds from './sounds/simonRGBY.mp3';
@@ -30,8 +30,11 @@ const App = () => {
 
   const [userlost, setUserLost] = useState(false);  //turn true when user loses
 
-  const [score, setScore] = useLocalStorageState("this-game", 0);  // local Storage custom Hook
-  const [lastScore, setLastScore] = useLocalStorageState("last-game", 0);  //local Storage custom Hook
+  const [currentScore, setcurrentScore] = useState(0);  //current game score
+  const [lastScore, setlastScore] = useLocalStorageState("last-game", 0);  // local Storage custom Hook
+  const [highest, setHighest] = useLocalStorageState("highest-score", 0);  //local Storage custom Hook
+
+
 
   const colors = ["blue", "red", "green", "yellow"];
 
@@ -71,8 +74,20 @@ const App = () => {
       setActiveAll(true);
       await timeout(800);
       setActiveAll(false);
+      setcurrentScore(0)
+
     }
   };
+
+  // finding the highest score 
+  const highestScore = () => {
+    if (lastScore < highest) {
+      setHighest(highest)
+    } else {
+      setHighest(lastScore)
+    }
+
+  }
 
   // starting the game
   useEffect(() => {
@@ -147,6 +162,7 @@ const App = () => {
           setStage("Simon Says");
           setSimonPlays(true);
           setLevel((taskSequence.length) + 1);
+          setcurrentScore(level * 10)
           setUserPlays(false);
           setUserSequence([]);
         }
@@ -159,8 +175,8 @@ const App = () => {
         setUserSequence([]);
         setTaskSequence([]);
         setUserLost(true);
-        setLastScore(score);
-        setScore((level - 1) * 10);
+        highestScore();
+        setlastScore((level - 1) * 10);
         setLevel(0);
         setStage("I'm sorry");
         await timeout(2000);
@@ -207,8 +223,9 @@ const App = () => {
 
       </div>
       <Score
-        score={score}
         lastScore={lastScore}
+        highest={highest}
+        currentScore={currentScore}
       />
     </Fragment>
   );
