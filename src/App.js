@@ -81,10 +81,8 @@ const App = () => {
 
   // finding the highest score 
   const highestScore = () => {
-    if (lastScore < highest) {
-      setHighest(highest)
-    } else {
-      setHighest(lastScore)
+    if (currentScore > highest) {
+      setHighest(currentScore)
     }
 
   }
@@ -105,7 +103,6 @@ const App = () => {
 
       const newTaskSequence = [...taskSequence, newColor];
       setTaskSequence(newTaskSequence);
-      console.log(newTaskSequence, "simon order");
     }
   }, [gameOn, simonPlays]);
 
