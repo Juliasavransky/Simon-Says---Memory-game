@@ -1,5 +1,6 @@
 # Simon Says - Memory Game
-# ![image](https://user-images.githubusercontent.com/63636407/133898239-4af9eb11-b2a4-40bc-847d-f3bcc591299b.png)
+
+![sinom](https://user-images.githubusercontent.com/63636407/133907719-844fa3b0-c9a5-4f5e-9232-0c5e23c8e1ca.jpg)
 
 # Getting Started with Create React App
 
