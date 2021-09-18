@@ -179,6 +179,7 @@ const App = () => {
         await timeout(2000);
         setStage("Game Over");
         await timeout(2000);
+        setcurrentScore(0)
         setStage("Start");
         setUserLost(false);
       }
