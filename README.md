@@ -1,3 +1,6 @@
+# Simon Says - Memory Game
+# ![image](https://user-images.githubusercontent.com/63636407/133898239-4af9eb11-b2a4-40bc-847d-f3bcc591299b.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
