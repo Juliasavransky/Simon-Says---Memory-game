@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Simon-Says---Memory-game/static/css/main.61bb2cd8.chunk.css",
-    "main.js": "/Simon-Says---Memory-game/static/js/main.77c1b41c.chunk.js",
-    "main.js.map": "/Simon-Says---Memory-game/static/js/main.77c1b41c.chunk.js.map",
+    "main.js": "/Simon-Says---Memory-game/static/js/main.b871b89a.chunk.js",
+    "main.js.map": "/Simon-Says---Memory-game/static/js/main.b871b89a.chunk.js.map",
     "runtime-main.js": "/Simon-Says---Memory-game/static/js/runtime-main.6169b280.js",
     "runtime-main.js.map": "/Simon-Says---Memory-game/static/js/runtime-main.6169b280.js.map",
     "static/js/2.6e7e9445.chunk.js": "/Simon-Says---Memory-game/static/js/2.6e7e9445.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.6169b280.js",
     "static/js/2.6e7e9445.chunk.js",
     "static/css/main.61bb2cd8.chunk.css",
-    "static/js/main.77c1b41c.chunk.js"
+    "static/js/main.b871b89a.chunk.js"
   ]
 }
