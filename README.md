@@ -1,6 +1,9 @@
 # Simon Says - Memory Game
 
+### A classic memory game of Simon, in which a single player competes with the computer. The computer chooses a random sequence made of the four colors and the player needs to repeat that sequence. On each level, the sequence gets longer (a new color is added to the last sequence). The game has unlimited levels. For each level the player gets a score saved in the local storage. Also, the app saves the highest score that the player got. Once the player fails to repeat the sequence, they can restart the game.
+
 ![sinom](https://user-images.githubusercontent.com/63636407/133907719-844fa3b0-c9a5-4f5e-9232-0c5e23c8e1ca.jpg)
+## For building this app I've used React hooks, local storage hook, sound hook.
 
 # [Welcome to try the game](https://juliasavransky.github.io/Simon-Says---Memory-game/)
 
